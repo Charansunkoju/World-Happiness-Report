@@ -128,7 +128,18 @@ with tabs[1]:  # Health (Life Expectancy)
     # Year selection
     year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="health_key")
     filtered_data = merged_df[merged_df['Year'] == year]
-    
+
+    if year == 2015:
+        colors = "green"
+    elif year == 2016:
+        colors = "yellow"
+    elif year == 2017:
+        colors = "red"
+    elif year == 2018:
+        colors = "black"
+    elif year == 2019:
+        colors = "purple"
+        
     fig, ax = plt.subplots()
     sns.scatterplot(data=filtered_data, x='health_life_expectancy', y='happiness_score', color=colors , ax=ax)
     st.pyplot(fig)
@@ -140,7 +151,18 @@ with tabs[2]:  # Social Support
     # Year selection
     year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="family_key")
     filtered_data = merged_df[merged_df['Year'] == year]
-    
+
+    if year == 2015:
+        colors = "green"
+    elif year == 2016:
+        colors = "yellow"
+    elif year == 2017:
+        colors = "red"
+    elif year == 2018:
+        colors = "black"
+    elif year == 2019:
+        colors = "purple"
+        
     fig, ax = plt.subplots()
     sns.scatterplot(data=filtered_data, x='family', y='happiness_score',color=colors, ax=ax)
     st.pyplot(fig)
@@ -152,7 +174,18 @@ with tabs[3]:  # Freedom
     # Year selection
     year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="freedom_key")
     filtered_data = merged_df[merged_df['Year'] == year]
-    
+
+    if year == 2015:
+        colors = "green"
+    elif year == 2016:
+        colors = "yellow"
+    elif year == 2017:
+        colors = "red"
+    elif year == 2018:
+        colors = "black"
+    elif year == 2019:
+        colors = "purple"
+        
     fig, ax = plt.subplots()
     sns.scatterplot(data=filtered_data, x='freedom', y='happiness_score',color=colors, ax=ax)
     st.pyplot(fig)
@@ -165,6 +198,17 @@ with tabs[4]:  # Trust in Government
     year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="corrupt_key")
     filtered_data = merged_df[merged_df['Year'] == year]
 
+    if year == 2015:
+        colors = "green"
+    elif year == 2016:
+        colors = "yellow"
+    elif year == 2017:
+        colors = "red"
+    elif year == 2018:
+        colors = "black"
+    elif year == 2019:
+        colors = "purple"
+        
     fig, ax = plt.subplots()
     sns.scatterplot(data=filtered_data, x='trust_government_corruption', y='happiness_score',color=colors, ax=ax)
     st.pyplot(fig)
