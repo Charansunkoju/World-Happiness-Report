@@ -106,9 +106,19 @@ with tabs[0]:  # Economic Stability (GDP)
     # Year selection
     year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="gdp_key")
     filtered_data = merged_df[merged_df['Year'] == year]
-    
+    if year == "2015":
+        colors = "green"
+    elif year == "2016":
+        colors = "yellow"
+    elif year == "2017":
+        colors = "red"
+    elif year == "2018":
+        colors = "black"
+    elif year == "2019":
+        colors = "purple"
+
     fig, ax = plt.subplots()
-    sns.scatterplot(data=filtered_data, x='economy_gdp_per_capita', y='happiness_score', color="green", ax=ax)
+    sns.scatterplot(data=filtered_data, x='economy_gdp_per_capita', y='happiness_score', color=colors, ax=ax)
     st.pyplot(fig)
 
 with tabs[1]:  # Health (Life Expectancy)
@@ -120,7 +130,7 @@ with tabs[1]:  # Health (Life Expectancy)
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
-    sns.scatterplot(data=filtered_data, x='health_life_expectancy', y='happiness_score', hue='Year', palette='plasma', ax=ax)
+    sns.scatterplot(data=filtered_data, x='health_life_expectancy', y='happiness_score', color=colors , ax=ax)
     st.pyplot(fig)
 
 with tabs[2]:  # Social Support
@@ -132,7 +142,7 @@ with tabs[2]:  # Social Support
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
-    sns.scatterplot(data=filtered_data, x='family', y='happiness_score', hue='Year', palette='coolwarm', ax=ax)
+    sns.scatterplot(data=filtered_data, x='family', y='happiness_score',color=colors, ax=ax)
     st.pyplot(fig)
 
 with tabs[3]:  # Freedom
@@ -144,7 +154,7 @@ with tabs[3]:  # Freedom
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
-    sns.scatterplot(data=filtered_data, x='freedom', y='happiness_score', hue='Year', palette='cividis', ax=ax)
+    sns.scatterplot(data=filtered_data, x='freedom', y='happiness_score',color=colors, ax=ax)
     st.pyplot(fig)
 
 with tabs[4]:  # Trust in Government
@@ -156,7 +166,7 @@ with tabs[4]:  # Trust in Government
     filtered_data = merged_df[merged_df['Year'] == year]
 
     fig, ax = plt.subplots()
-    sns.scatterplot(data=filtered_data, x='trust_government_corruption', y='happiness_score', hue='Year', palette='magma', ax=ax)
+    sns.scatterplot(data=filtered_data, x='trust_government_corruption', y='happiness_score',color=colors, ax=ax)
     st.pyplot(fig)
 
 
