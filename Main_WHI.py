@@ -1,5 +1,8 @@
 import streamlit as st
 
+logo_path = "LOGO.png"
+
+st.sidebar.image(logo_path)
 
 #Page
 
