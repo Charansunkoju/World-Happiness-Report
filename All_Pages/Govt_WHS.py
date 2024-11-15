@@ -108,7 +108,7 @@ with tabs[0]:  # Economic Stability (GDP)
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
-    sns.scatterplot(data=filtered_data, x='economy_gdp_per_capita', y='happiness_score', hue='Year', palette='viridis', ax=ax)
+    sns.scatterplot(data=filtered_data, x='economy_gdp_per_capita', y='happiness_score', color="green", ax=ax)
     st.pyplot(fig)
 
 with tabs[1]:  # Health (Life Expectancy)
