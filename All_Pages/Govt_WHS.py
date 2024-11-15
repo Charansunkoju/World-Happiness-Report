@@ -96,9 +96,17 @@ st.title("Government Insights for Happiness Factors")
 # Display insights within tabs
 tabs = st.tabs(["Economic Stability (GDP)", "Health (Life Expectancy)", "Social Support", "Freedom", "Trust in Government"])
 
+year_range = merged_df['Year'].min()
+year_range1 = merged_df['Year'].max()
+
 with tabs[0]:  # Economic Stability (GDP)
     st.header("Economic Stability (GDP per Capita)")
     st.write("Higher GDP per capita is strongly correlated with happiness.")
+
+    # Year selection
+    year = st.slider("Select Year", min_value=year_range, max_value=year_range1, value=year_range1, step=1, key="gdp_year")
+    filtered_data = merged_df[merged_df['Year'] == year]
+    
     fig, ax = plt.subplots()
     sns.scatterplot(data=merged_df, x='economy_gdp_per_capita', y='happiness_score', hue='Year', palette='viridis', ax=ax)
     st.pyplot(fig)
