@@ -108,7 +108,7 @@ with tabs[0]:  # Economic Stability (GDP)
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
-    sns.scatterplot(data=merged_df, x='economy_gdp_per_capita', y='happiness_score', hue='Year', palette='viridis', ax=ax)
+    sns.scatterplot(data=filtered_data, x='economy_gdp_per_capita', y='happiness_score', hue='Year', palette='viridis', ax=ax)
     st.pyplot(fig)
 
 with tabs[1]:  # Health (Life Expectancy)
@@ -120,7 +120,7 @@ with tabs[1]:  # Health (Life Expectancy)
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
-    sns.scatterplot(data=merged_df, x='health_life_expectancy', y='happiness_score', hue='Year', palette='plasma', ax=ax)
+    sns.scatterplot(data=filtered_data, x='health_life_expectancy', y='happiness_score', hue='Year', palette='plasma', ax=ax)
     st.pyplot(fig)
 
 with tabs[2]:  # Social Support
@@ -132,7 +132,7 @@ with tabs[2]:  # Social Support
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
-    sns.scatterplot(data=merged_df, x='family', y='happiness_score', hue='Year', palette='coolwarm', ax=ax)
+    sns.scatterplot(data=filtered_data, x='family', y='happiness_score', hue='Year', palette='coolwarm', ax=ax)
     st.pyplot(fig)
 
 with tabs[3]:  # Freedom
@@ -144,7 +144,7 @@ with tabs[3]:  # Freedom
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
-    sns.scatterplot(data=merged_df, x='freedom', y='happiness_score', hue='Year', palette='cividis', ax=ax)
+    sns.scatterplot(data=filtered_data, x='freedom', y='happiness_score', hue='Year', palette='cividis', ax=ax)
     st.pyplot(fig)
 
 with tabs[4]:  # Trust in Government
@@ -156,7 +156,7 @@ with tabs[4]:  # Trust in Government
     filtered_data = merged_df[merged_df['Year'] == year]
 
     fig, ax = plt.subplots()
-    sns.scatterplot(data=merged_df, x='trust_government_corruption', y='happiness_score', hue='Year', palette='magma', ax=ax)
+    sns.scatterplot(data=filtered_data, x='trust_government_corruption', y='happiness_score', hue='Year', palette='magma', ax=ax)
     st.pyplot(fig)
 
 
