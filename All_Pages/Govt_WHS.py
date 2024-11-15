@@ -8,11 +8,11 @@ import streamlit as st
 
 @st.cache_data
 def load_data():
-    df_2015 = pd.read_csv("C:/Users/91814/OneDrive/Desktop/DatasetWH/2015.csv")
-    df_2016 = pd.read_csv("C:/Users/91814/OneDrive/Desktop/DatasetWH/2016.csv")
-    df_2017 = pd.read_csv("C:/Users/91814/OneDrive/Desktop/DatasetWH/2017.csv")
-    df_2018 = pd.read_csv("C:/Users/91814/OneDrive/Desktop/DatasetWH/2018.csv")
-    df_2019 = pd.read_csv("C:/Users/91814/OneDrive/Desktop/DatasetWH/2019.csv")
+    df_2015 = pd.read_csv("DatasetWH/2015.csv")
+    df_2016 = pd.read_csv("DatasetWH/2016.csv")
+    df_2017 = pd.read_csv("DatasetWH/2017.csv")
+    df_2018 = pd.read_csv("DatasetWH/2018.csv")
+    df_2019 = pd.read_csv("DatasetWH/2019.csv")
     
     # Add a 'Year' column to each dataset
     df_2015["Year"] = 2015
