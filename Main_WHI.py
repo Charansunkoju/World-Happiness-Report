@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
 logo_path = "LOGO.png"
 
 st.sidebar.image(logo_path)
