@@ -96,15 +96,15 @@ st.title("Government Insights for Happiness Factors")
 # Display insights within tabs
 tabs = st.tabs(["Economic Stability (GDP)", "Health (Life Expectancy)", "Social Support", "Freedom", "Trust in Government"])
 
-year_range = merged_df['Year'].min()
-year_range1 = merged_df['Year'].max()
+# year_range = merged_df['Year'].min()
+# year_range1 = merged_df['Year'].max()
 
 with tabs[0]:  # Economic Stability (GDP)
     st.header("Economic Stability (GDP per Capita)")
     st.write("Higher GDP per capita is strongly correlated with happiness.")
 
     # Year selection
-    year = st.slider("Select Year", min_value=year_range, max_value=year_range1, value=year_range1, step=1, key="gdp_year")
+    year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="gdp_key")
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
@@ -116,7 +116,7 @@ with tabs[1]:  # Health (Life Expectancy)
     st.write("Life expectancy is an essential factor in citizen happiness.")
 
     # Year selection
-    year = st.slider("Select Year", min_value = year_range, max_value = year_range1,value = year_range ,key = "health_key")
+    year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="health_key")
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
@@ -128,7 +128,7 @@ with tabs[2]:  # Social Support
     st.write("Stronger social support is associated with higher happiness.")
 
     # Year selection
-    year = st.slider("Select Year", min_value = year_range, max_value = year_range1,value = year_range ,key = "family_kay")
+    year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="family_key")
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
@@ -140,7 +140,7 @@ with tabs[3]:  # Freedom
     st.write("Personal freedom correlates positively with happiness.")
 
     # Year selection
-    year = st.slider("Select Year", min_value = year_range, max_value = year_range1,value = year_range ,key = "freedom_key")
+    year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="freedom_key")
     filtered_data = merged_df[merged_df['Year'] == year]
     
     fig, ax = plt.subplots()
@@ -152,7 +152,7 @@ with tabs[4]:  # Trust in Government
     st.write("Higher trust in government positively impacts happiness.")
     
     # Year selection
-    year = st.slider("Select Year", min_value = year_range, max_value = year_range1,value = year_range ,key = "corrupt_key")
+    year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="corrupt_key")
     filtered_data = merged_df[merged_df['Year'] == year]
 
     fig, ax = plt.subplots()
