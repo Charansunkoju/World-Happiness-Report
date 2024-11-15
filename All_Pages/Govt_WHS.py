@@ -106,15 +106,15 @@ with tabs[0]:  # Economic Stability (GDP)
     # Year selection
     year = st.selectbox("Select Year", options=merged_df['Year'].unique(),key="gdp_key")
     filtered_data = merged_df[merged_df['Year'] == year]
-    if year == "2015":
+    if year == 2015:
         colors = "green"
-    elif year == "2016":
+    elif year == 2016:
         colors = "yellow"
-    elif year == "2017":
+    elif year == 2017:
         colors = "red"
-    elif year == "2018":
+    elif year == 2018:
         colors = "black"
-    elif year == "2019":
+    elif year == 2019:
         colors = "purple"
 
     fig, ax = plt.subplots()
