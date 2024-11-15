@@ -114,6 +114,11 @@ with tabs[0]:  # Economic Stability (GDP)
 with tabs[1]:  # Health (Life Expectancy)
     st.header("Health and Life Expectancy")
     st.write("Life expectancy is an essential factor in citizen happiness.")
+
+    # Year selection
+    year = st.slider("Select Year", min_value = year_range, max_value = year_range1,value = year_range ,key = "health_key")
+    filtered_data = merged_df[merged_df['Year'] == year]
+    
     fig, ax = plt.subplots()
     sns.scatterplot(data=merged_df, x='health_life_expectancy', y='happiness_score', hue='Year', palette='plasma', ax=ax)
     st.pyplot(fig)
@@ -121,6 +126,11 @@ with tabs[1]:  # Health (Life Expectancy)
 with tabs[2]:  # Social Support
     st.header("Social Support (Family)")
     st.write("Stronger social support is associated with higher happiness.")
+
+    # Year selection
+    year = st.slider("Select Year", min_value = year_range, max_value = year_range1,value = year_range ,key = "family_kay")
+    filtered_data = merged_df[merged_df['Year'] == year]
+    
     fig, ax = plt.subplots()
     sns.scatterplot(data=merged_df, x='family', y='happiness_score', hue='Year', palette='coolwarm', ax=ax)
     st.pyplot(fig)
@@ -128,6 +138,11 @@ with tabs[2]:  # Social Support
 with tabs[3]:  # Freedom
     st.header("Freedom to Make Life Choices")
     st.write("Personal freedom correlates positively with happiness.")
+
+    # Year selection
+    year = st.slider("Select Year", min_value = year_range, max_value = year_range1,value = year_range ,key = "freedom_key")
+    filtered_data = merged_df[merged_df['Year'] == year]
+    
     fig, ax = plt.subplots()
     sns.scatterplot(data=merged_df, x='freedom', y='happiness_score', hue='Year', palette='cividis', ax=ax)
     st.pyplot(fig)
@@ -135,6 +150,11 @@ with tabs[3]:  # Freedom
 with tabs[4]:  # Trust in Government
     st.header("Trust in Government (Low Corruption)")
     st.write("Higher trust in government positively impacts happiness.")
+    
+    # Year selection
+    year = st.slider("Select Year", min_value = year_range, max_value = year_range1,value = year_range ,key = "corrupt_key")
+    filtered_data = merged_df[merged_df['Year'] == year]
+
     fig, ax = plt.subplots()
     sns.scatterplot(data=merged_df, x='trust_government_corruption', y='happiness_score', hue='Year', palette='magma', ax=ax)
     st.pyplot(fig)
