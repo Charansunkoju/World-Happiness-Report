@@ -4,6 +4,13 @@ The World Happiness Report is an influential annual publication that provides a 
 # Introduction
 The World Happiness Report provides a comprehensive ranking of countries based on the happiness and life satisfaction reported by their citizens. This valuable resource plays a vital role in illuminating the various factors that contribute to an individual's sense of well-being and guides policymakers in fostering environments where people can truly flourish. The World Happiness Report advocates for the perspective that happiness transcends personal experiences; it is a collective aspiration that societies should strive for together. Furthermore, it underscores the importance of implementing policies that enhance well-being, promote equity, and build social trust, thereby influencing governments, institutions, and organizations across the globe to prioritize the happiness of their citizens.
 
+# Visualizations
+
+- Identify declining trends in specific countries or regions.
+- Highlight regions with governance or freedom challenges.
+- Pinpoint areas for targeted interventions using heatmaps and rankings.
+- An interactive scatter plot to allow exploration of specific countries and factors.
+
 
 # Streamlit Dashboard:  https://world-happiness-report-construct1.streamlit.app
 
