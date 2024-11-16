@@ -11,7 +11,7 @@ with col1:
     st.image("LOGO.png",width=180,use_container_width=False)
 # Use the fixed font size in the HTML
 with col2:
-    st.markdown(f"<h1 style='text-align: center; color: #008000; font-size: {font_size}px;'>World Happiness Report</h1>",unsafe_allow_html=True)
+    st.markdown(f"<h1 style= color: #008000; font-size: {font_size}px;'>World Happiness Report</h1>",unsafe_allow_html=True)
 
 st.write("")
 
