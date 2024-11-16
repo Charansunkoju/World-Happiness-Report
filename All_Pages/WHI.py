@@ -6,11 +6,12 @@ font_size = 60
 
 font_size_subject = 25
 
+col1,col2 = st.columns([1,4])
+with col1:
+    st.image("LOGO.png",width=180,use_container_width=False)
 # Use the fixed font size in the HTML
-st.markdown(
-    f"<h1 style='text-align: center; color: #008000; font-size: {font_size}px;'>World Happiness Report</h1>",
-    unsafe_allow_html=True
-)
+with col2:
+    st.markdown(f"<h1 style='text-align: center; color: #008000; font-size: {font_size}px;'>World Happiness Report</h1>",unsafe_allow_html=True)
 
 st.write("")
 
