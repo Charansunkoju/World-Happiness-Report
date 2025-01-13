@@ -1,4 +1,4 @@
-# World Happiness Report
+# World Happiness Report Analysis and Visualization
 The World Happiness Report is an influential annual publication that provides a comprehensive overview of global happiness and well-being.
 
 # Introduction
