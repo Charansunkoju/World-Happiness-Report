@@ -30,7 +30,7 @@ font_size_2 = 29    # Smaller size
 # Display the formatted text with sizes applied
 st.markdown(
     f"""
-    <h4 style='color: #4D4D4D; font-size: {font_size_1}px;'>What we will see in this Report?</h4>
+    <h4 style='color: #FFFF00; font-size: {font_size_1}px;'>What we will see in this Report?</h4>
     <ol>
         <li style='color: #FFFFFF; font-size: {font_size_2}px;'>NGO Insights from World Happiness Data</li>
         <li style='color: #FFFFFF; font-size: {font_size_2}px;'>Government Insights from World Happiness Data</li>
