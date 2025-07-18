@@ -11,7 +11,7 @@ with col1:
     st.image("LOGO.png",width=200,use_container_width=False)
 # Use the fixed font size in the HTML
 with col2:
-    st.markdown(f"<h1 style= 'color: #008000; font-size: {font_size}px;'>World Happiness Report</h1>",unsafe_allow_html=True)
+    st.markdown(f"<h1 style= 'color: #FFA500; font-size: {font_size}px;'>World Happiness Report</h1>",unsafe_allow_html=True)
     st.markdown(f"<h4 style = 'color: #FFFFFF; font-size: {font_size_subject}px;'>The World Happiness Report is an annual publication that ranks countries based on various factors that contribute to the well-being and happiness of their citizens.</h4>",unsafe_allow_html=True)
 st.write("")
 
