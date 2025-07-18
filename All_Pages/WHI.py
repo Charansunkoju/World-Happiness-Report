@@ -32,8 +32,8 @@ st.markdown(
     f"""
     <h4 style='color: #4D4D4D; font-size: {font_size_1}px;'>What we will see in this Report?</h4>
     <ol>
-        <li style='color: #000080; font-size: {font_size_2}px;'>NGO Insights from World Happiness Data</li>
-        <li style='color: #000080; font-size: {font_size_2}px;'>Government Insights from World Happiness Data</li>
+        <li style='color: #FFFFFF; font-size: {font_size_2}px;'>NGO Insights from World Happiness Data</li>
+        <li style='color: #FFFFFF; font-size: {font_size_2}px;'>Government Insights from World Happiness Data</li>
     </ol>
         
     """, 
