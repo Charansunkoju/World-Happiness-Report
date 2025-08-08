@@ -1,4 +1,11 @@
 # World Happiness Report Analysis and Visualization
+
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)](https://github.com/topics/streamlit)
+[![Data Visualization](https://img.shields.io/badge/Data%20Visualization-Matplotlib%20%7C%20Seaborn-ffdd00)](https://github.com/topics/data-visualization)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)](https://github.com/topics/pandas)
+[![Numpy](https://img.shields.io/badge/Numpy-Scientific%20Computing-013243?logo=numpy)](https://github.com/topics/numpy)
+
 The World Happiness Report is an influential annual publication that provides a comprehensive overview of global happiness and well-being.
 
 # Introduction
